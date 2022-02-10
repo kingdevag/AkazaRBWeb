@@ -7,69 +7,65 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="../assets/favicon.png">
-    <title>Hbot</title>
+    <link rel="icon" href="{{url_for ('static', filename = './img/bot.png')}}">
+    <title>AKAZA</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid container">
-            <a class="navbar-brand" href="/">
-                <img src="../assets/bot.png" alt="" width="50" height="50" class="rounded-circle"> &nbsp;
-                <span>Hbot</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#/">Commands</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./team.html">Staff</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="linksdrop" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Links
-                        </a>
-                        <ul class="dropdown-menu bgn" aria-labelledby="linksdrop">
-                            <li><a class="dropdown-item text-muted font-weight-bold" href="" target="_blank">Invite
-                                    Bot</a>
-                            </li>
-                            <li><a class="dropdown-item text-muted font-weight-bold" href="" target="_blank">Support
-                                    Server</a></li>
-                            <li><a class="dropdown-item text-muted font-weight-bold" href="./faq.html">FAQ</a></li>
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item text-muted font-weight-bold"
-                                    href="https://github.com/Hadi-Koubeissi" target="_blank">Official Github</a></li>
-                            <li><a class="dropdown-item text-muted font-weight-bold" href="">View
-                                    Documentation</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="d-flex ml-auto" id="headerlogin">
-                    <li class="nav-item" style="list-style: none;">
-                        <a class="nav-link btn btn-outline-secondary login" href="/login">Login</a>
-                    </li>
-                </div>
-            </div>
+      <div class="container-fluid container">
+        <a class="navbar-brand" href="/">
+          <img src="{{url_for ('static', filename = './img/bot.png')}}" alt="" width="50" height="50" class="rounded-circle"> &nbsp; <span>Akaza</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/commands">Commands</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/team">Staff</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="linksdrop" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Links
+              </a>
+              <ul class="dropdown-menu bgn" aria-labelledby="linksdrop">
+                <li><a class="dropdown-item text-muted font-weight-bold" href="https://discord.com/api/oauth2/authorize?client_id=933860473068195900&permissions=8&scope=bot" target="_blank">Invite
+                    Bot</a>
+                </li>
+                <li><a class="dropdown-item text-muted font-weight-bold" href="https://discord.gg/PatBCfNs5D" target="_blank">Support
+                    Server</a></li>
+                <li><a class="dropdown-item text-muted font-weight-bold" href="/faq">FAQ</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item text-muted font-weight-bold" href="https://github.com/kingdevag/AkazaDBot"
+                    target="_blank">Github Oficial</a></li>
+                <li><a class="dropdown-item text-muted font-weight-bold" href="https://discordpy.readthedocs.io/en/stable/">Ver Documentacion</a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="d-flex ml-auto" id="headerlogin">
+            <li class="nav-item" style="list-style: none;">
+              <a class="nav-link btn btn-outline-secondary login" href={{oauth_uri}}>Login</a>
+            </li>
+          </div>
         </div>
+      </div>
     </nav>
     </div>
 
     <div class="jumbotron text-center bg-transparent">
         <h1 class="commandstitle">Commands</h1>
-        <p class="lead commandssub">View the commands for Hbot.</p>
+        <p class="lead commandssub">Ver los comandos para Akaza.</p>
         <hr>
         <input id="myInput" type="text" class="searchbox" placeholder="Search">
         <br>
@@ -123,9 +119,9 @@
                 <div class="row d-flex justify-content-center">
                     <div class="">
                         <p style="font-size: 19px; padding: 0px; margin: 0px;"><a href="https://github.com/Hadi-Koubeissi"
-                                style="text-decoration: none; color: white;">Made with 💖 by Hadi Koubeissi</a></br>Hbot ©
-                            2021. All
-                            rights reserved.</br>[<a href="./license.html"><b>Terms Of Use</b></a>]</p>
+                                style="text-decoration: none; color: white;">Hecho con 💖 by K1ngDev</a></br>Akaza ©
+                                2022. Todos
+                                Derechos reservados.</br>[<a href="/license"><b>Terminos de uso</b></a>]</p>
                     </div>
                 </div>
             </div>
