@@ -16,7 +16,7 @@ HSC = HostConfig
 app=Flask(__name__)
 app.config.from_object(DBC)
 
-client = APIClient(TOKEN, client_secret=CLIENT_SECRET)
+client = APIClient(TOKEN, client_secret="CLIENT_SECRET")
 
 app.config["secret_key"] = "XD"
 csrf = CSRFProtect()
